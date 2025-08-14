@@ -1,0 +1,30 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="CleanArchitecture.nuspec" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ProgressionLab.AspireHost/ProgressionLab.AspireHost.csproj" />
+    <Project Path="src/ProgressionLab.ServiceDefaults/ProgressionLab.ServiceDefaults.csproj" />
+    <Project Path="src/ProgressionLab.Core/ProgressionLab.Core.csproj" />
+    <Project Path="src/ProgressionLab.Infrastructure/ProgressionLab.Infrastructure.csproj" />
+    <Project Path="src/ProgressionLab.UseCases/ProgressionLab.UseCases.csproj" />
+    <Project Path="src/ProgressionLab.Web/ProgressionLab.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ProgressionLab.FunctionalTests/ProgressionLab.FunctionalTests.csproj">
+      <BuildDependency Project="src/ProgressionLab.Web/ProgressionLab.Web.csproj" />
+    </Project>
+    <Project Path="tests/ProgressionLab.IntegrationTests/ProgressionLab.IntegrationTests.csproj">
+      <BuildDependency Project="src/ProgressionLab.Infrastructure/ProgressionLab.Infrastructure.csproj" />
+    </Project>
+    <Project Path="tests/ProgressionLab.UnitTests/ProgressionLab.UnitTests.csproj" />
+  </Folder>
+</Solution>
