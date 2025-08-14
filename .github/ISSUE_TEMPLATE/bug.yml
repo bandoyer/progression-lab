@@ -1,0 +1,33 @@
+name: Bug Report
+description: Report a defect
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["P0 - blocking", "P1 - major", "P2 - minor"]
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See error ...
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      render: markdown
