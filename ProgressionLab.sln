@@ -41,6 +41,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressionLab.AspireHost",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressionLab.AspireTests", "tests\ProgressionLab.AspireTests\ProgressionLab.AspireTests.csproj", "{07D864BA-6245-D5C0-5C79-BB55D27ACBBF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{9E57ABF4-6AE3-49BA-AB4D-D37F7E06E159}"
+	ProjectSection(SolutionItems) = preProject
+		docs\architecture-decisions\adr-001-dotnet-di-adoption.md = docs\architecture-decisions\adr-001-dotnet-di-adoption.md
+		docs\architecture-decisions\README.md = docs\architecture-decisions\README.md
+		docs\AI_GUIDELINES.md = docs\AI_GUIDELINES.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
