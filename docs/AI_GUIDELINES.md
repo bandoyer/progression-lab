@@ -1,14 +1,32 @@
 ﻿# ProgressionLab – AI Guidelines
 
-## Pull Request summaries
-- Write a **crisp, bullet-style** summary.
-- Fill these sections exactly: **What**, **Why**, **How I tested**, **Impact**, **Risks & Rollback**, **Notes**.
-- Keep “What” to 3–6 bullets, start each with a **verb**.
-- In **Impact**, call out API endpoints, DB migrations, security/privacy, performance, and observability (logs/metrics/traces).
-- If a section doesn’t apply, write **N/A**.
-- List 3–5 **most-impacted files** when relevant.
-- Prefer present tense; avoid marketing language.
+## PR descriptions (required sections)
+Write concise, bullet-style PR descriptions. If a section doesn’t apply, write “N/A”.
 
-## Tone & format
-- Plain, technical English; short sentences.
-- No speculation or claims not supported by the diff/commits.
+### What
+- 3–6 bullets; start with a verb; call out new modules vs. modified code.
+
+### Why
+- Problem/user story being solved; link issues.
+
+### How I tested
+- Unit/integration/manual steps; edge cases; commands.
+
+### Impact
+**API:** [ ] New endpoints / [ ] Breaking  
+**DB:** [ ] Migrations  
+**Security/Privacy:** [ ] Changes (auth, secrets, PII)  
+**Performance/Observability:** key notes (hot paths, logs, metrics, traces)
+
+### Risks & Rollback
+- Risk: low / medium / high
+- Rollback plan: revert PR / disable flag / restore backup
+
+### Notes
+- 3–5 most impacted files when relevant.
+
+## Commit messages
+Use Conventional Commits: `feat: …`, `fix: …`, `chore: …`, `docs: …`, `refactor: …`, `test: …`.
+
+## Scope for AI
+Prefer code/diff context; avoid marketing tone; no claims not supported by changes.
