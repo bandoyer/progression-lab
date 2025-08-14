@@ -1,0 +1,29 @@
+name: auto-label-by-title
+on:
+  issues:
+    types: [opened, edited, reopened]
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.issue.title.toLowerCase();
+            const add = async (label) => {
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  labels: [label],
+                });
+              } catch (e) {
+                // ignore if label missing
+              }
+            };
+            if (title.startsWith('bug:')) await add('bug');
+            if (title.startsWith('story:')) await add('story');
+            if (title.startsWith('task:')) await add('task');
+            if (title.startsWith('feat:')) await add('feature');
+            if (title.startsWith('docs:')) await add('docs');

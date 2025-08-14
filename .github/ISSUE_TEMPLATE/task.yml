@@ -1,0 +1,29 @@
+name: Task
+description: Track a concrete task (non-user-facing)
+title: "task: "
+labels: ["task"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: "Add OpenIddict packages and register server endpoints"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      placeholder: |
+        - Install NuGet packages
+        - Wire Program.cs services
+        - Verify endpoints
+      render: markdown
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - App builds and runs
+        - `/connect/authorize` and `/connect/token` are reachable
+      render: markdown
