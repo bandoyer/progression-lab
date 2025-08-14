@@ -47,9 +47,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressionLab.AspireTests"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{9E57ABF4-6AE3-49BA-AB4D-D37F7E06E159}"
 	ProjectSection(SolutionItems) = preProject
-		docs\architecture-decisions\adr-001-dotnet-di-adoption.md = docs\architecture-decisions\adr-001-dotnet-di-adoption.md
-		docs\architecture-decisions\README.md = docs\architecture-decisions\README.md
 		docs\AI_GUIDELINES.md = docs\AI_GUIDELINES.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adr", "adr", "{7DD6913B-0EB0-41E6-9C05-353737F1D86C}"
+	ProjectSection(SolutionItems) = preProject
+		docs\adr\0001-auth-topology.md = docs\adr\0001-auth-topology.md
+		docs\adr\README.md = docs\adr\README.md
 	EndProjectSection
 EndProject
 Global
@@ -197,6 +201,7 @@ Global
 		{08E69B3B-4418-40BD-80EC-B38C0ECFBAE2} = {106AE906-5075-410A-B941-912F811848EE}
 		{C7039CB5-4F76-4F19-ABD7-C755FAB2A870} = {106AE906-5075-410A-B941-912F811848EE}
 		{07D864BA-6245-D5C0-5C79-BB55D27ACBBF} = {B31B4797-1D9F-4288-808C-BE9A31A98C7D}
+		{7DD6913B-0EB0-41E6-9C05-353737F1D86C} = {9E57ABF4-6AE3-49BA-AB4D-D37F7E06E159}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0F19343-8185-4A9F-9165-0EA8544BC925}
