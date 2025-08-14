@@ -53,6 +53,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adr", "adr", "{7DD6913B-0EB0-41E6-9C05-353737F1D86C}"
 	ProjectSection(SolutionItems) = preProject
 		docs\adr\0001-auth-topology.md = docs\adr\0001-auth-topology.md
+		docs\adr\README.md = docs\adr\README.md
 	EndProjectSection
 EndProject
 Global
