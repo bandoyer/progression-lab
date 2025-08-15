@@ -1,0 +1,62 @@
+name: User Story
+description: Track a customer-facing slice of value with AC and DoD.
+title: "AUTH-### — "
+labels: ["story", "auth"]
+# 🧭 Auto-add new stories to your project (owner/NUMBER)
+projects: ["bandoyer/3"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: Story
+      description: Use "As a, I want, so that".
+      placeholder: |
+        As a <role>,
+        I want <capability>,
+        So that <outcome>.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Checklist which defines "done" for this story.
+      value: |
+        - [ ] New `.NET 8` Web API project named `ProgressionLab.IdentityProvider` in `/src`
+        - [ ] Uses **OpenIddict** for OAuth2/OIDC token issuance
+        - [ ] Integrated with **ASP.NET Identity** for users/roles
+        - [ ] Short‑lived access tokens + rotated refresh tokens
+        - [ ] Endpoints: Registration, Login (no ROPC), Auth Code + PKCE, Refresh
+        - [ ] Scope `api` enforced on protected resources
+        - [ ] Environment config in `appsettings.{Environment}.json`
+        - [ ] Local run succeeds with test user auth
+        - [ ] README updated with setup & run
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope (for clarity)
+      placeholder: Items explicitly NOT delivered by this story.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done
+      options:
+        - label: Tests updated/added (unit/integration)
+        - label: Docs updated (README or /docs)
+        - label: Logging & errors handled
+        - label: Feature behind a flag if incomplete
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Links
+      value: |
+        - Follow OpenIddict Getting Started: https://documentation.openiddict.com/guides/getting-started/
+        - Keep IdP separate from API and Web BFF

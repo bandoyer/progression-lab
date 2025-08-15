@@ -1,0 +1,45 @@
+name: Bug
+description: Report a defect with repro steps and expected behavior
+title: "[BUG] "
+labels: ["bug", "triage"]
+projects: ["bandoyer/1"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: What happened? What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      value: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: OS/Browser/Version, .NET runtime, etc.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (logs, screenshots)
+      placeholder: Paste logs or attach files.
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - label: Blocks a release
+        - label: Reproducible
+        - label: Intermittent

@@ -1,0 +1,45 @@
+name: Task
+description: A small piece of work linked to a user story
+title: "[TASK] "
+labels: ["task"]
+projects: ["bandoyer/1"]  # auto-add to your board
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: Parent story
+      description: Link to the parent story issue (e.g., #123)
+      placeholder: "#<story-issue-number>"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One-sentence outcome for this task.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: Actionable, checkable steps.
+      value: |
+        - [ ] Install required NuGet packages
+        - [ ] Configure Identity + OpenIddict in `Program.cs`
+        - [ ] Enable `/connect/authorize` and `/connect/token`
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      value: |
+        - [ ] App builds and runs without errors
+        - [ ] `/connect/authorize` reachable
+        - [ ] `/connect/token` reachable
+    validations:
+      required: true
